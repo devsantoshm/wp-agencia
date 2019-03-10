@@ -5,17 +5,19 @@
 
 	<main role="main">
 		<!-- section -->
-		<section>
+		<section class="clear">
 
 			<h1><span><?php the_title(); ?></span></h1>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class('grid2-3'); ?>>
 
 				<?php the_content(); ?>
-
+				<!-- <img src="<?php the_field('imagen_1') ?>">
+				<img src="<?php the_field('imagen_2') ?>"> -->
+	
 				<?php //comments_template( '', true ); // Remove if you don't want comments ?>
 
 				<br class="clear">
@@ -24,6 +26,28 @@
 
 			</article>
 			<!-- /article -->
+			<div class="galeria-nosotros grid1-3">
+				<div class="foto">
+					<?php  
+						$imagen = get_field('imagen_1');//trae id de imagen
+						$size = 'mediano';
+
+						if ($imagen) {
+							echo wp_get_attachment_image( $imagen, $size, false, array('class' => 'fotografia') );
+						}
+					?>
+				</div>
+				<div class="foto">
+					<?php
+						$imagen = get_field('imagen_2');//trae id de imagen
+						$size = 'mediano';
+
+						if ($imagen) {
+							echo wp_get_attachment_image( $imagen, $size, false, array('class' => 'fotografia') );
+						}
+					?>
+				</div>
+			</div>
 
 		<?php endwhile; ?>
 
