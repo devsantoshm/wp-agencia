@@ -68,6 +68,9 @@ input:focus {
 	outline:0;
 	border:1px solid #04A4CC;
 }
+h2{
+	color: #d4771e;
+}
 
 /*------------------------------------*\
     STRUCTURE
@@ -84,6 +87,9 @@ input:focus {
 }
 .grid1-3{
 	width: 33.3%;
+}
+.grid2-4{
+	width: 50%;
 }
 
 /** EFECTO POLAROID */
@@ -212,6 +218,34 @@ h1 span{
 	background-color: #fff;
 }
 
+/* TEMPLATE PAGE-TOURS */
+article.type-tours h2{
+	margin: 10px 0;
+}
+article.type-tours p{
+	margin: 5px 0;
+}
+.imagen-destacada{
+	position: relative;
+}
+.imagen-destacada .mas-info{
+	position: absolute;
+	top: 19px;
+	right: -13px;
+}
+.fecha-precio p.fecha{
+	float: left;
+	width: 50%;
+	margin-left: 5px;
+}
+.fecha-precio p.precio{
+	float: right;
+	width: 40%;
+	text-align: right;
+	color: #d4771e;
+	font-weight: bold;
+	margin-left: 5px;
+}
 
 /*------------------------------------*\
     IMAGES

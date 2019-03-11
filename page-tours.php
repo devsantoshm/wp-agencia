@@ -21,12 +21,13 @@
 			<?php $tours = new WP_Query($args); ?>
 			<?php while($tours->have_posts() ): $tours->the_post(); ?>
 				<!-- article -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php the_post_thumbnail('toursDestacado'); ?>
-				
-					<a href="<?php the_permalink(); ?>">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/masinfo.png">
-					</a>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('grid2-4'); ?>>
+					<div class="imagen-destacada">
+						<?php the_post_thumbnail('toursDestacado'); ?>
+						<a class="mas-info" href="<?php the_permalink(); ?>">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/masinfo.png">
+						</a>
+					</div>
 					
 					<a href="<?php the_permalink(); ?>">
 						<h2><?php the_title(); ?></h2>
@@ -41,9 +42,10 @@
 						$fechaRetorno = date_i18n($formato, $fechaRetorno);
 
 					?>
-
-					<p class="fecha"><?php echo $fechasalida; ?> - <?php echo $fechaRetorno; ?></p>
-					<p class="precio"><?php the_field('precio'); ?></p>
+					<div class="fecha-precio clear">
+						<p class="fecha"><?php echo $fechasalida; ?> - <?php echo $fechaRetorno; ?></p>
+						<p class="precio"><?php the_field('precio'); ?></p>
+					</div>
 
 					<p><?php the_field('descripcion_corta'); ?></p>
 				</article>
