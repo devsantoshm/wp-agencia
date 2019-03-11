@@ -28,7 +28,8 @@ if (function_exists('add_theme_support'))
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('mediano', 350, 250, true);
-    add_image_size('toursDestacado', 523, 294, true); 
+    add_image_size('toursDestacado', 523, 294, true);
+    add_image_size('toursPrincipal', 751, 422, true); 
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(

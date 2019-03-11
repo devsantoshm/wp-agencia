@@ -179,7 +179,8 @@ div.foto:nth-child(even) {
 }
 
 /* CONTENIDO */
-main{
+/* solamente a las paginas y no a las single-page */
+.page main{
 	margin-top: 250px;
 }
 /* sidebar */
@@ -218,6 +219,13 @@ h1 span{
 	background-color: #fff;
 }
 
+h3 {
+	color: #df7900;
+	font-size: 24px;
+	font-weight: normal;
+	border-bottom: 4px solid #cccccc;
+}
+
 /* TEMPLATE PAGE-TOURS */
 article.type-tours h2{
 	margin: 10px 0;
@@ -245,6 +253,37 @@ article.type-tours p{
 	color: #d4771e;
 	font-weight: bold;
 	margin-left: 5px;
+}
+
+/* SINGLE TOURS */
+.informacion-viaje {
+	background-color: rgba(0,0,0,.13);
+	border: 1px solid #c0c0c0;
+	margin-top: 20px;
+	padding: 20px;
+}
+.informacion-viaje p {
+	font-weight: bold;
+}
+.informacion-viaje span{
+	font-weight: normal;
+}
+h2.itinerario {
+	text-align: center;
+	font-size: 28px;
+}
+.gallery .gallery-item {
+	height: 100px;
+	width: auto!important;
+	padding: 0 6px;
+}
+.gallery-item img {
+	border: none!important;
+	width: 100%;
+	height: 100px;
+}
+.gallery br {
+	display: none;
 }
 
 /*------------------------------------*\
