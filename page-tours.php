@@ -22,7 +22,30 @@
 			<?php while($tours->have_posts() ): $tours->the_post(); ?>
 				<!-- article -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php the_title(); ?>
+					<?php the_post_thumbnail('toursDestacado'); ?>
+				
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/masinfo.png">
+					</a>
+					
+					<a href="<?php the_permalink(); ?>">
+						<h2><?php the_title(); ?></h2>
+					</a>
+
+					<?php 
+						$formato = 'd F, Y';
+						$fecha = strtotime(get_field('fecha_de_salida'));
+						$fechasalida = date_i18n($formato, $fecha);
+
+						$fechaRetorno = strtotime(get_field('fecha_de_retorno'));
+						$fechaRetorno = date_i18n($formato, $fechaRetorno);
+
+					?>
+
+					<p class="fecha"><?php echo $fechasalida; ?> - <?php echo $fechaRetorno; ?></p>
+					<p class="precio"><?php the_field('precio'); ?></p>
+
+					<p><?php the_field('descripcion_corta'); ?></p>
 				</article>
 				<!-- /article -->
 			<?php endwhile; wp_reset_postdata(); ?>
