@@ -4,8 +4,15 @@
 		
 		'use strict';
 		
-		// DOM ready, take it away
-		
+		jQuery('.gallery a').each(function(){
+			jQuery(this).attr({'data-lightbox':'galeria'})
+		})
+
+		lightbox.option({
+	      'showImageNumberLabel': false,
+	      'wrapAround': true
+	    })
+
 	});
 	
 })(jQuery, this);
