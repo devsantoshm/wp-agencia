@@ -13,6 +13,8 @@
 	      'wrapAround': true
 	    })
 
+	    jQuery('.single-tours header nav ul li:contains("tours")').addClass('current_page_item')
+
 	});
 	
 })(jQuery, this);
