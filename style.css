@@ -286,6 +286,54 @@ h2.itinerario {
 	display: none;
 }
 
+/** Testimoniales */
+
+blockquote {
+	border-left: 15px solid #df7900;
+	padding: .2em 10px;
+	margin-bottom: 21px;
+}
+
+article.testimonial {
+	background-color: #fefaf5;
+	border: 1px solid #a8a8a8;
+	margin-bottom: 20px;
+}
+article.testimonial h2 {
+	margin:0;
+	padding:5px 0;
+	background-color: #df7900;
+	color: #fff;
+	padding-left: 20px;
+}
+article.testimonial blockquote {
+	border-left: none;
+	margin:0;
+	quotes: "\201C""\201C";
+}
+article.testimonial blockquote:before {
+	color: #616161;
+	content: open-quote;
+	font-size: 13em;
+	line-height: .9em;
+	margin-right: .1em;
+	vertical-align: -.4em;
+	display: inline;
+	position: absolute;
+}
+article.testimonial blockquote p {
+	display: block;
+	margin-left: 80px;
+}
+article.testimonial .testimonial {
+	text-align: right;
+	margin: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/
