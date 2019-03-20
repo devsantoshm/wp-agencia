@@ -14,7 +14,7 @@
 			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1 ?>
 			<?php $args = array(
 					'post_type' => 'post',
-					'posts_per_page' => 5,
+					'posts_per_page' => 1,
 					'orderby' => 'date',
 					'order' => 'DESC',
 					'paged' => $paged
@@ -26,7 +26,7 @@
 
 			<?php if($i==0)  { ?>
 			
-			<article class="entrada clear">
+			<article class="entrada destacada clear">
 				<div class="foto">
 					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail('blogPrincipal'); ?>
@@ -34,7 +34,9 @@
 				</div>
 
 				<div class="grid1-3">
-					
+					<span class="date">Escrito el: <?php the_time('F j, Y'); ?></span> <br/>
+					<span class="author"><?php _e( 'Publicado por: ', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+					<p><?php _e( 'Categoría : ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
 				</div>
 				<div class="grid2-3">
 					<h2> 
@@ -67,7 +69,7 @@
 			<!-- FIN ENTRADAS -->
 
 			<?php $i++; endwhile; ?>
-			<ul>
+			<ul class="paginacion clear">
 				<li><?php previous_posts_link('&laquo; Anterior', $consejos->max_num_pages); ?></li>
 				<li><?php next_posts_link('Siguiente &raquo; ', $consejos->max_num_pages); ?></li>
 			</ul>
