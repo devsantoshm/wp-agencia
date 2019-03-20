@@ -10,16 +10,21 @@
 			<h1><span><?php the_title(); ?></span></h1>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
+			
+			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1 ?>
 			<?php $args = array(
 					'post_type' => 'post',
-					'posts_per_page' => 1,
+					'posts_per_page' => 5,
 					'orderby' => 'date',
 					'order' => 'DESC',
+					'paged' => $paged
 			); ?>
 
-			<?php $ultima = new WP_Query($args); ?>
-			<?php while($ultima->have_posts() ): $ultima->the_post(); ?>
+			<?php $consejos = new WP_Query($args); ?>
+			<?php $i = 0; ?>
+			<?php while($consejos->have_posts() ): $consejos->the_post(); ?>
+
+			<?php if($i==0)  { ?>
 			
 			<article class="entrada clear">
 				<div class="foto">
@@ -39,19 +44,9 @@
 				</div>
 			</article>
 
-			<?php endwhile; wp_reset_postdata(); ?>
+			<?php } else { ?>
+			<!-- FIN ENTRADA DESTACADA -->
 
-			<?php $args = array(
-					'post_type' => 'post',
-					'posts_per_page' => 5,
-					'orderby' => 'date',
-					'order' => 'DESC',
-					'offset' => 1
-			); ?>
-
-			<?php $consejos = new WP_Query($args); ?>
-			<?php while($consejos->have_posts() ): $consejos->the_post(); ?>
-			
 			<article class="entrada clear">
 				<div class="grid1-3">
 					<div class="foto">
@@ -68,7 +63,15 @@
 				</div>
 			</article>
 
-			<?php endwhile; wp_reset_postdata(); ?>
+			<?php } ?>
+			<!-- FIN ENTRADAS -->
+
+			<?php $i++; endwhile; ?>
+			<ul>
+				<li><?php previous_posts_link('&laquo; Anterior', $consejos->max_num_pages); ?></li>
+				<li><?php next_posts_link('Siguiente &raquo; ', $consejos->max_num_pages); ?></li>
+			</ul>
+			<?php wp_reset_postdata(); ?>
 
 		<?php edit_post_link(); ?>
 
