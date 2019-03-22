@@ -91,6 +91,9 @@ h2{
 .grid2-4{
 	width: 50%;
 }
+.grid1-4{
+	width: 25%;
+}
 
 /** EFECTO POLAROID */
 div.foto {
@@ -188,18 +191,66 @@ div.foto:nth-child(even) {
 
 }
 /* footer */
+footer [class*='grid']  {
+	padding: 3px;
+}
 .footer {
 	background-color: #323232;
 	border-top: 6px solid #df7900;
-	padding: 20px 0;
+	padding: 20px 0 0 0;
+	color: #B4B3B4;
+}
+footer h3{
 	color: #fff;
+	border: none;
+	margin-bottom: 30px;
+}
+footer a, footer a:hover{
+	color: #fff;
+	font-weight: normal;
 }
 .footer .widgets .columna3{
 	float: left;
 	width: 25%;
 }
 .footer p.copyright{
+	margin-top: 20px;
 	text-align: center;
+	padding: 10px 0;
+	background: #323232; /* Old browsers */
+	background: -moz-linear-gradient(left,  #323232 0%, #464646 50%, #323232 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#323232), color-stop(50%,#464646), color-stop(100%,#323232)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #323232 0%,#464646 50%,#323232 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #323232 0%,#464646 50%,#323232 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #323232 0%,#464646 50%,#323232 100%); /* IE10+ */
+	background: linear-gradient(to right,  #323232 0%,#464646 50%,#323232 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323232', endColorstr='#323232',GradientType=1 ); /* IE6-9 */
+}
+footer h2 {
+	margin:0!important;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: normal;
+}
+footer .fecha-precio p.fecha {
+	font-size:12px;
+	width: 100%;
+}
+footer img {
+	border: 3px solid #464646;
+}
+footer article {
+	margin-bottom: 10px;
+}
+footer .widget_sp_image {
+	margin-top: 28px;
+}
+footer .widget_sp_image h3{
+	display: none;
+	
+}
+footer .widget_sp_image img {
+	border: none;
 }
 
 /*------------------------------------*\
@@ -358,6 +409,11 @@ article.testimonial .testimonial {
 	margin-top: 0;
 }
 .single-post a{
+	font-weight: bold;
+	color: #df7900;
+}
+p.compartir {
+	margin-top: 20px;
 	font-weight: bold;
 	color: #df7900;
 }

@@ -28,6 +28,9 @@
 				<p><?php _e( 'Categoría : ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
 				<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
 				<!-- /post details -->
+				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<p class="compartir">Compartir</p>
+				<div class="addthis_sharing_toolbox"></div>
 			</div>
 
 			<div class="grid2-3">

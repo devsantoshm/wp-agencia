@@ -30,7 +30,8 @@ if (function_exists('add_theme_support'))
     add_image_size('mediano', 350, 250, true);
     add_image_size('toursDestacado', 523, 294, true);
     add_image_size('toursPrincipal', 751, 422, true);
-    add_image_size('blogPrincipal', 1100, 404, true); 
+    add_image_size('blogPrincipal', 1100, 404, true);
+    add_image_size('miniatura', 98, 66, true); 
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -180,8 +181,8 @@ if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Widget Area 1', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
+        'name' => __('Zona de cupones', 'html5blank'),
+        'description' => __('Agregue aquí sus cupones (máximo 2)', 'html5blank'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
