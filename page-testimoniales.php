@@ -38,6 +38,11 @@
 			</article>
 			<!-- /article -->
 
+			<div class="contacto-testimoniales grid1-3">
+				<h3>Envíanos tu testimonial</h3>
+				<?php echo do_shortcode( '[contact-form-7 id="102" title="Formulario testimonial"]' ); ?>
+			</div>
+
 		<br class="clear">
 		<?php edit_post_link(); ?>
 
