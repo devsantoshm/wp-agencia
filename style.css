@@ -472,6 +472,42 @@ ul.paginacion li a {
 }
 
 /*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+/** PRINCIPAL */
+section.slider {
+	margin-top: -100px;
+}
+ul.slider {
+	margin:0;
+	padding:0;
+}
+.bx-wrapper .bx-controls-direction a {
+  width: 44px;
+  height: 84px;
+}
+.bx-wrapper{
+	border: none !important;
+}
+.bx-viewport {
+	overflow: visible !important;
+}
+.bx-wrapper .bx-viewport {
+	left: 0;
+	box-shadow: none;
+}
+.bx-wrapper .bx-prev, 
+.bx-wrapper .bx-prev:hover{
+	background-position: 0 10px;
+	left: 30px;
+}
+.bx-wrapper .bx-next,
+.bx-wrapper .bx-next:hover{
+	right: 30px;
+	background-position: -43px 10px;
+}
+
+/*------------------------------------*\
     IMAGES
 \*------------------------------------*/
 

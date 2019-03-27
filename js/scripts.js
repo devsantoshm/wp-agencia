@@ -13,6 +13,10 @@
 	      'wrapAround': true
 	    })
 
+		$('ul.slider').bxSlider({
+			mode: 'fade',
+			pager:false
+		})
 	    jQuery('.single-tours header nav ul li:contains("tours")').addClass('current_page_item')
 	    jQuery('.single-post header nav ul li:contains("consejos")').addClass('current_page_item')
 
