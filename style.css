@@ -474,7 +474,7 @@ ul.paginacion li a {
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
-/** PRINCIPAL */
+/** TEMPLATE  FRONTPAGE PRINCIPAL */
 section.slider {
 	margin-top: -100px;
 }
@@ -488,6 +488,7 @@ ul.slider {
 }
 .bx-wrapper{
 	border: none !important;
+	margin-bottom: 26px !important;
 }
 .bx-viewport {
 	overflow: visible !important;
@@ -505,6 +506,22 @@ ul.slider {
 .bx-wrapper .bx-next:hover{
 	right: 30px;
 	background-position: -43px 10px;
+}
+
+section.tours .fecha-precio {
+	background-color: #d4771e;
+	text-align: center;
+}
+section.tours .fecha-precio  a {
+	color: #ffffff!important;
+	display: block;
+	font-weight: bold;
+	font-size:1.6em;
+}
+section.tours .fecha-precio p.fecha {
+	width: 100%;
+	color: #ffffff;
+	margin-top: 0;
 }
 
 /*------------------------------------*\
