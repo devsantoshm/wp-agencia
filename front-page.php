@@ -78,5 +78,61 @@
 			
 		</section> <!--.tours -->
 
+		<section class="consejos-testimoniales clear">
+			<div class="grid2-3">
+				<h2 class="titulo"><span>Consejos para viajar</span></h2>
+				<?php $args = array(
+					'post_type' => 'post',
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'posts_per_page' =>2,
+				); ?>
+				<?php $entradas = new WP_Query($args); ?>
+				<?php while($entradas->have_posts()): $entradas->the_post(); ?>
+				<div class="entrada clear">
+
+					<div class="grid1-3">
+			
+						<?php the_post_thumbnail('entradasIndex'); ?>
+
+					</div>
+
+					<div class="grid2-3">
+
+						<h3><?php the_title(); ?></h3>
+
+						<?php html5wp_excerpt('html5wp_custom_post'); ?>
+						<br>
+						<a href="<?php the_permalink(); ?>" class="naranja">Continuar leyendo</a>
+
+					</div>
+
+				</div>
+
+				<?php endwhile; wp_reset_postdata(); ?>
+
+			</div>
+			<div class="grid1-3">
+				<h2 class="titulo"><span>Testimoniales</span></h2>
+				<?php $args = array(
+					'post_type' => 'testimonios',
+					'posts_per_page' => 2,
+					'order' => 'DESC',
+					'orderby' => 'date',
+				); ?>
+				<?php $testimoniales = new WP_Query($args); ?>
+				<?php while ($testimoniales->have_posts() ): $testimoniales->the_post(); ?>
+
+				<article class="testimonial">
+					<blockquote><p><?php html5wp_excerpt('html5wp_index'); ?></p></blockquote>
+					<p class="testimonial"><?php the_field('nombre'); ?></p>
+					<p class="testimonial"><?php the_field('ciudad'); ?></p>
+				</article>
+
+				<?php endwhile; wp_reset_postdata(); ?>
+
+				<a href="<?php echo get_permalink(11); ?>" class="naranja todos">Ver Todos</a>
+			</div>
+		</section>
 
 <?php get_footer(); ?>
