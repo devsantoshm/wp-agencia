@@ -470,7 +470,7 @@ function create_slider_type_html5()
             'not_found_in_trash' => __('No slider found in Trash', 'html5blank')
         ),
         'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
         'has_archive' => true,
         'menu_position' => 6,
         'supports' => array(

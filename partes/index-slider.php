@@ -1,7 +1,7 @@
 <?php $args = array(
 	'post_type'  => 'slider',
-	'orderby' => 'date',
-	'order' => 'DESC',
+	'orderby' => 'menu_order',
+	'order' => 'ASC',
 	'posts_per_page' => -1
 ); ?>
 
