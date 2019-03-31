@@ -133,6 +133,9 @@ function html5blank_styles()
     wp_register_style('bxslidercss', get_template_directory_uri() . '/css/jquery.bxslider.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bxslidercss');
 
+    wp_register_style('oxygen', 'https://fonts.googleapis.com/css?family=Oxygen', array(), '1.0', 'all');
+    wp_enqueue_style('oxygen');
+
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 }

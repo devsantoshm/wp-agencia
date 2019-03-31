@@ -72,6 +72,10 @@ h2{
 	color: #d4771e;
 }
 
+h1,h2,h3,h4,h5{
+	font-family: 'Oxygen', sans-serif;
+}
+
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
@@ -146,6 +150,38 @@ div.foto:nth-child(even) {
 	top: 0;
 	background-size: cover; /* para que cubra la imagen en todos los tamaños de la pagina */ 
 }
+
+/* BUSCADOR */
+form.search{
+	text-align: right;
+	position: relative;
+}
+input.search-input{
+	position: absolute;
+	right: 34px;
+	width: 120px;
+	border: 2px solid #df7900;
+	background-color: transparent;
+	height: 35px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	-webkit-transition: width .8s;
+	transition: width .8s;
+}
+input.search-input:focus{
+	width: 400px;
+}
+button.search-submit{
+	width: 35px;
+	height: 41px;
+	outline: none;
+	border: none;
+	background-color: #df7900;
+	text-indent: -9999px;
+	background-image: url(img/buscador.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
 /* logo */
 .logo {
 	width: 246px;
@@ -170,8 +206,11 @@ div.foto:nth-child(even) {
 	padding: 0 15px;
 	height: 100%;
 	line-height: 73px;
+	-webkit-transition: all .6s ease;
+	transition: all .6s ease;
 }
-.nav ul li.current_page_item{
+.nav ul li.current_page_item,
+.nav ul li:hover{
 	background-color: #df7900;
 }
 .nav ul li a{
