@@ -137,11 +137,16 @@ div.foto:nth-child(even) {
 }
 .navegacion {
 	background-color: rgba(0,0,0,.7);
-	height: 73px;
-	margin-top: 15px;
 	position: relative;
 	z-index: 1; /* para que el menu salga adelante */
 }
+@media only screen and (min-width: 992px) {
+	.navegacion {
+		height: 73px;
+		margin-top: 15px;
+	}
+}
+
 .imagenFondo{
 	height: 300px;
 	width: 100%;
@@ -183,9 +188,16 @@ button.search-submit{
 	background-position: center center;
 }
 /* logo */
-.logo {
-	width: 246px;
-	float: left;
+.logo img{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+@media only screen and (min-width: 992px) {
+	.logo {
+		width: 246px;
+		float: left;
+	}
 }
 .logo-img {
 
@@ -554,9 +566,12 @@ ul.paginacion li a {
     PAGES
 \*------------------------------------*/
 /** TEMPLATE  FRONTPAGE PRINCIPAL */
-section.slider {
-	margin-top: -100px;
+@media only screen and (min-width: 992px) {
+	section.slider {
+		margin-top: -100px;
+	}
 }
+
 ul.slider {
 	margin:0;
 	padding:0;

@@ -29,7 +29,7 @@
 
 		<!-- header -->
 		<header class="header clear" role="banner">
-			<div class="navegacion">
+			<div class="navegacion clear">
 				<div class="wrapper">
 					<!-- logo -->
 					<div class="logo">
