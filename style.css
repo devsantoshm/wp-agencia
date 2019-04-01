@@ -191,34 +191,60 @@ button.search-submit{
 
 }
 /* nav */
-.nav {
-	width: 640px;
-	float: right;
+.nav{
+	display: none;
 }
-.nav ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	height: 73px;
-}
-.nav ul li{
-	float: left;
-	padding: 0 15px;
-	height: 100%;
-	line-height: 73px;
-	-webkit-transition: all .6s ease;
-	transition: all .6s ease;
-}
-.nav ul li.current_page_item,
-.nav ul li:hover{
+.slicknav_btn.slicknav_open{
 	background-color: #df7900;
 }
-.nav ul li a{
-	font-size: 14px;
-	font-weight: bold;
-	color: #ffffff;
-	text-transform: uppercase;
+.slicknav_btn,
+.slicknav_nav{
+	margin-bottom: 10px;
 }
+.slicknav_nav a{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.slicknav_nav a:hover{
+	background-color: #df7900;
+	color: #fff;
+}
+
+@media only screen and (min-width: 992px) {
+	div.slicknav_menu{
+		display: none;
+	}
+	.nav {
+		width: 640px;
+		float: right;
+		display: block;
+	}
+	.nav ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		height: 73px;
+	}
+	.nav ul li{
+		float: left;
+		padding: 0 15px;
+		height: 100%;
+		line-height: 73px;
+		-webkit-transition: all .6s ease;
+		transition: all .6s ease;
+	}
+	.nav ul li.current_page_item,
+	.nav ul li:hover{
+		background-color: #df7900;
+	}
+	.nav ul li a{
+		font-size: 14px;
+		font-weight: bold;
+		color: #ffffff;
+		text-transform: uppercase;
+	}	
+}
+
 
 /* CONTENIDO */
 /* solamente a las paginas y no a las single-page */

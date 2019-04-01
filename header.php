@@ -49,7 +49,7 @@
 		</header>
 		<!-- /header -->
 		
-		<?php if(is_page()): ?>
+		<?php if(is_page() && !is_front_page()): ?>
 			<?php $destacada = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 			<?php $destacada = $destacada[0]; ?>
 			<div class="imagenFondo" style="background-image:url(<?php echo $destacada; ?>);"></div>

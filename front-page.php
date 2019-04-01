@@ -1,5 +1,5 @@
 <?php 
-/*Template Name: Nosotros*/
+
 ?>
 <?php get_header(); ?>
 
