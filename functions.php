@@ -28,7 +28,7 @@ if (function_exists('add_theme_support'))
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('mediano', 350, 250, true);
-    add_image_size('toursDestacado', 523, 294, true);
+    add_image_size('toursDestacado', 705, 391, true);
     add_image_size('toursPrincipal', 751, 422, true);
     add_image_size('blogPrincipal', 1100, 404, true);
     add_image_size('slider', 2000, 600, true);
