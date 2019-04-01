@@ -164,7 +164,7 @@ form.search{
 input.search-input{
 	position: absolute;
 	right: 34px;
-	width: 120px;
+	width: calc(100% - 38px);
 	border: 2px solid #df7900;
 	background-color: transparent;
 	height: 35px;
@@ -173,9 +173,17 @@ input.search-input{
 	-webkit-transition: width .8s;
 	transition: width .8s;
 }
-input.search-input:focus{
-	width: 400px;
+@media only screen and (min-width: 768px) {
+	input.search-input{
+		width: 120px;
+	}
+	input.search-input:focus{
+		width: 400px;
+	}	
 }
+/* input.search-input:focus{
+	width: 400px;
+} */
 button.search-submit{
 	width: 35px;
 	height: 41px;
