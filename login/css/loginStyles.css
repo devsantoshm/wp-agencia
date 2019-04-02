@@ -1,0 +1,112 @@
+body.login {
+	background: transparent;
+	padding-top: 100px;
+	box-sizing: border-box; /* su ancho y alto no incrementa se queda igual */
+}
+body.login div#login {
+	background-color: rgba(0,0,0, .65);
+	padding: 40px 30px;
+	border-radius: 15px;
+	-webkit-box-shadow: -3px 7px 35px 1px rgba(0,0,0,.8);
+	box-shadow: -3px 7px 35px 1px rgba(0,0,0,.8);
+}
+@media only screen and (min-width: 768px) {
+	body.login div#login {
+		width: 700px;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+		height: 330px;
+	}	
+}
+body.login div#login h1 {}
+@media only screen and (min-width: 768px) {
+	body.login div#login h1 {
+		display: inline-block;
+		margin-top: 110px;
+		width: 50%;
+	}
+}
+body.login div#login h1 a {
+	background-image: url(../img/logo.png);
+	height: 100px;
+	background-size: 50%;
+	width: 100%;
+	margin: 0;
+}
+body.login div#login form#loginform {
+	float: right;
+}
+body.login div#login form#loginform p {
+	color: #000;
+}
+body.login div#login form#loginform p label {
+	color: #000;
+}
+body.login div#login form#loginform input {
+	background: #fff;
+	border: 1px solid #000;
+}
+body.login div#login form#loginform input#user_login {}
+body.login div#login form#loginform input#user_pass {}
+body.login div#login form#loginform p.forgetmenot {
+	margin-top: 7px;
+}
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+body.login div#login form#loginform p.submit {}
+body.login div#login form#loginform p.submit input#wp-submit {
+	background-color: #000;
+	border: none;
+	text-transform: uppercase;
+	padding: 5px 40px;
+	height: auto;
+	box-shadow: none;
+	text-shadow: none;
+	font-weight: bold;
+}
+body.login div#login form#loginform p.submit input#wp-submit:focus {
+	box-shadow: none;
+}
+body.login div#login p#nav {
+	text-align: center;
+}
+@media only screen and (min-width: 768px) {
+	body.login div#login p#nav {
+		display: inline;
+	}	
+}
+body.login div#login p#nav a {
+	color: #fff;
+}
+body.login div#login p#backtoblog {
+	text-align: center;
+}
+@media only screen and (min-width: 768px) {
+	body.login div#login p#backtoblog {
+		display: inline;
+		float: right;
+		margin: 0;
+	}	
+}
+body.login div#login p#backtoblog a {
+	color: #fff;
+}
+
+#login_error{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box; /* hacer que ocupe el ancho de la caja a pesar que tiene padding */
+}
+
+.grupo{
+	margin-bottom: 20px;
+}
+.grupo:after{
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
