@@ -19,7 +19,15 @@ function admin_styles(){
     wp_enqueue_style('logincss', get_template_directory_uri() . '/login/css/loginStyles.css', false);
     wp_enqueue_script('jquery'); //wordpress se encarga de poner jquery
     wp_enqueue_script('vegasjs', get_template_directory_uri() . '/login/js/vegas.min.js', array('jquery'), '2.7.1', true);
-    wp_enqueue_script('loginjs', get_template_directory_uri() . '/login/js/login.js', array('jquery'), '2.7.1', true); 
+    wp_enqueue_script('loginjs', get_template_directory_uri() . '/login/js/login.js', array('jquery'), '2.7.1', true);
+
+    wp_localize_script( 
+        'loginjs', 
+        'login_imagenes', 
+        array(
+            'ruta_plantilla' => get_template_directory_uri()
+        ) 
+    ); 
 
 }
 add_action( 'login_enqueue_scripts', 'admin_styles', 10 ); //10 es la prioridad de ejecucion
